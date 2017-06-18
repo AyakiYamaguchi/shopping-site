@@ -18,6 +18,10 @@ li{
 }
 
 
+p{
+    @include fontsize(15);
+}
+
 body{
     background-color:#f9f8f6;
 
@@ -215,6 +219,7 @@ body{
             p{
                 width:100%;
                 margin-bottom:10px;
+                @include fontsize(13);
             }
             
         }
@@ -282,7 +287,7 @@ body{
             }
             
             p{
-                @include fontsize(16);
+                @include fontsize(14);
             }
             
             span{
@@ -444,15 +449,19 @@ body{
                 background-color:#fff;
                 border-bottom:2px solid #f9f8f6;
                 margin:0;
+                @include fontsize(13);
                 
                 img{
                     padding:5px 0;
                     
                 }
                 
+
+                
                 a{
                     text-decoration:none;
                     color:black;
+                    
                 }
             }
             
@@ -516,6 +525,7 @@ body{
                     display:inline-block;
                     width:100%;
                     height:100%;
+                    @include fontsize(13);
                 }
             
             }
@@ -575,7 +585,10 @@ body{
     .footer_text{
         text-align:center;
         padding:10px;
-        @include fontsize(10);
+        
+        p{
+            @include fontsize(13);
+        }
         
         .copyright{
             color:#b8b4ac;
@@ -639,7 +652,13 @@ body{
         }
         
         .pc_top{
+            display:block;
             width:100%;
+            padding-bottom:10px;
+        }
+        
+        .sp_top{
+            display:none;
         }
     }
     
@@ -941,12 +960,17 @@ body{
         font-weight:bold;
     }
     
+    p{
+        @include fontsize(13);
+    }
+    
     table{
         width:100%;
         color: #887f69;
         
         td{
             border:1px solid #e2ddd4;
+            @include fontsize(14);
         }
     
         .color{
@@ -971,4 +995,23 @@ body{
     .quantity{
         border-bottom:0px;
     }
+    
+
 }
+
+
+@media(max-width:440px){
+    .products_area{
+        padding:0 -20px;
+        box-sizing:border-box;
+    }
+}
+
+@media (max-width:550px) {
+  .products_area {
+      margin:0 -7.5%;
+     padding:0 7.5%;
+  }
+  
+}
+
