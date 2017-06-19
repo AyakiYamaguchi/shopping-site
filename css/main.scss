@@ -37,6 +37,7 @@ body{
                 margin-left:auto;
                 margin-right:auto;
                 padding:20px 0;
+                width:115px;
             }
             
             
@@ -118,16 +119,27 @@ body{
         
         
         .header_pc{
-            height:80px;
+            height:50px;
             position:relative;
             margin-bottom:15px;
+            margin-top:50px;
+            box-sizing:border-box;
             
             .pc_header_left{
                 width:30%;
+                height:100%;
                 position:absolute;
                 bottom:0;
                 left:0;
                 
+
+                
+                img{
+                    display:inline-block;
+                    height:100%;
+                    padding-bottom:10px;
+                    box-sizing:border-box;
+                }
             }
             
             
@@ -142,12 +154,13 @@ body{
                 
                 ul{
                     margin:0;
+                    height:100%;
                 
                 li{
                     display: inline-block;
                     list-style:none;
                     padding-left:10px;
-                    
+                    margin-bottom:10px;
                     
                     a{
                         text-decoration:none;
@@ -173,6 +186,10 @@ body{
             text-align:center;
             padding:15px 0;
             
+            img{
+                width:110px;
+            }
+            
         }
         
         .items_title_pc{
@@ -183,6 +200,16 @@ body{
             }
         }
         
+        
+        .items_title_sp_popular{
+            
+            text-align:center;
+            padding:15px 0;
+            
+            img{
+                width:150px;
+            }
+        }
     }
     
     
@@ -194,6 +221,12 @@ body{
     
     @media(max-width:550px){
         .items_title_pc{
+            display:none;
+        }
+    }
+    
+    @media(min-width:550px){
+        .items_title_sp_popular{
             display:none;
         }
     }
@@ -219,7 +252,7 @@ body{
             p{
                 width:100%;
                 margin-bottom:10px;
-                @include fontsize(13);
+                @include fontsize(12);
             }
             
         }
@@ -247,7 +280,12 @@ body{
         
         .guide_title_sp{
             text-align:center;
-            padding:15px 0
+            padding:15px 0;
+            
+            
+            img{
+                width:170px;
+            }
         }
         
         .guide_title_pc{
@@ -274,24 +312,26 @@ body{
             }
             
             h2{
-                @include fontsize(24);
+                @include fontsize(16);
                 color: #887f69;
                 font-weight:bold;
+                margin-bottom:10px;
             }
             
             h3{
-                @include fontsize(18);
+                @include fontsize(12);
                 margin:0;
                 color: #887f69;
                 font-weight:bold;
             }
             
             p{
-                @include fontsize(14);
+                @include fontsize(12);
+                margin-bottom:10px;
             }
             
             span{
-                @include fontsize(28);
+                @include fontsize(20);
             }
         }
         
@@ -302,7 +342,7 @@ body{
                 border-right:2px solid #f9f8f6;
                 border-left:2px solid #f9f8f6;
                 width:50%;
-                height:350px;
+                height:255px;
                 float:left;
                 margin:0;
                 
@@ -337,7 +377,7 @@ body{
             position:relative;
             height:100%;
             width:90%;
-            padding: 20px 0;
+            padding: 15px 0;
             margin:0;
             margin-left:auto;
             margin-right:auto;
@@ -355,7 +395,7 @@ body{
             dd{
                 display:block;
                 position:absolute;
-                top:20px;
+                top:15px;
                 right:0;
                 
                 
@@ -444,14 +484,19 @@ body{
             display:none;
             
             li{
+                position:relative;
                 list-style:none;
                 padding:15px 5%;
                 background-color:#fff;
                 border-bottom:2px solid #f9f8f6;
                 margin:0;
-                @include fontsize(13);
+                @include fontsize(12);
+                
                 
                 img{
+                    position:absolute;
+                    top:25%;
+                    right:5%;
                     padding:5px 0;
                     
                 }
@@ -478,6 +523,7 @@ body{
     
     .info_wrapper{
         margin-bottom:10px;
+        background-color:#fff;
         
         .info_title{
             background-color:#887f69;
@@ -525,7 +571,7 @@ body{
                     display:inline-block;
                     width:100%;
                     height:100%;
-                    @include fontsize(13);
+                    @include fontsize(12);
                 }
             
             }
@@ -711,7 +757,7 @@ body{
     padding:15px 0;
     
     h3{
-       @include fontsize(20); 
+       @include fontsize(16); 
        font-weight:bold;
        margin-bottom:5px;
     }
@@ -719,6 +765,7 @@ body{
     p{
         color:#a6a6a6;
         margin:0;
+        @include fontsize(11);
     }
     
     //SP用表示
@@ -855,7 +902,7 @@ body{
     border-bottom:2px solid #f6f5f2;
     
     img{
-        padding:10px;
+        padding:10px 0;
     }
     
     
@@ -894,8 +941,8 @@ body{
         margin:0;
         
         span{
-            color:red;
-            @include fontsize(30);
+            color:#e80f66;
+            @include fontsize(25);
         }
     }
     
@@ -954,14 +1001,20 @@ body{
     padding:20px 0;
     
     
+    h2{
+        @include fontsize(19);
+        color:#887f69;
+        font-weight:bold;
+    }
+    
     h3{
-        @include fontsize(20);
+        @include fontsize(16);
         color:#887f69;
         font-weight:bold;
     }
     
     p{
-        @include fontsize(13);
+        @include fontsize(11);
     }
     
     table{
@@ -970,7 +1023,7 @@ body{
         
         td{
             border:1px solid #e2ddd4;
-            @include fontsize(14);
+            @include fontsize(12);
         }
     
         .color{
@@ -990,6 +1043,10 @@ body{
 @media(min-width:550px){
     .products_discription{
         border-top:2px solid #f6f5f2;
+        
+        p{
+            @include fontsize(14);
+        }
     }
     
     .quantity{
@@ -1002,16 +1059,16 @@ body{
 
 @media(max-width:440px){
     .products_area{
-        padding:0 -20px;
         box-sizing:border-box;
     }
 }
 
 @media (max-width:550px) {
   .products_area {
-      margin:0 -7.5%;
-     padding:0 7.5%;
+      margin:0 -4%;
+     padding:0 4%;
   }
   
 }
+
 

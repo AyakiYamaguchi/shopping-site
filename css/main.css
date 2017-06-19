@@ -17,7 +17,8 @@ body {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      padding: 20px 0; }
+      padding: 20px 0;
+      width: 115px; }
     body header .header_sp .sp_menu {
       width: 100%;
       margin-bottom: 20px;
@@ -57,14 +58,22 @@ body {
     body header .header_pc {
       display: none; } }
   body header .header_pc {
-    height: 80px;
+    height: 50px;
     position: relative;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    margin-top: 50px;
+    box-sizing: border-box; }
     body header .header_pc .pc_header_left {
       width: 30%;
+      height: 100%;
       position: absolute;
       bottom: 0;
       left: 0; }
+      body header .header_pc .pc_header_left img {
+        display: inline-block;
+        height: 100%;
+        padding-bottom: 10px;
+        box-sizing: border-box; }
     body header .header_pc .pc_header_right {
       width: 70%;
       margin: 0;
@@ -73,11 +82,13 @@ body {
       bottom: 0;
       right: 0; }
       body header .header_pc .pc_header_right ul {
-        margin: 0; }
+        margin: 0;
+        height: 100%; }
         body header .header_pc .pc_header_right ul li {
           display: inline-block;
           list-style: none;
-          padding-left: 10px; }
+          padding-left: 10px;
+          margin-bottom: 10px; }
           body header .header_pc .pc_header_right ul li a {
             text-decoration: none;
             color: #524c3e;
@@ -86,15 +97,25 @@ body {
   body .items_area .items_title_sp {
     text-align: center;
     padding: 15px 0; }
+    body .items_area .items_title_sp img {
+      width: 110px; }
   body .items_area .items_title_pc {
     padding: 15px 0; }
     body .items_area .items_title_pc img {
       width: 100%; }
+  body .items_area .items_title_sp_popular {
+    text-align: center;
+    padding: 15px 0; }
+    body .items_area .items_title_sp_popular img {
+      width: 150px; }
   @media (min-width: 550px) {
     body .items_title_sp {
       display: none; } }
   @media (max-width: 550px) {
     body .items_title_pc {
+      display: none; } }
+  @media (min-width: 550px) {
+    body .items_title_sp_popular {
       display: none; } }
   body .item_wrapper {
     background-color: white; }
@@ -112,8 +133,8 @@ body {
       body .item_wrapper .item_list p {
         width: 100%;
         margin-bottom: 10px;
-        font-size: 13px;
-        font-size: 1.3rem; }
+        font-size: 12px;
+        font-size: 1.2rem; }
     @media (min-width: 550px) {
       body .item_wrapper .item_list {
         width: 33.333333%; } }
@@ -126,6 +147,8 @@ body {
     body .guide_area .guide_title_sp {
       text-align: center;
       padding: 15px 0; }
+      body .guide_area .guide_title_sp img {
+        width: 170px; }
     body .guide_area .guide_title_pc {
       padding: 15px 0; }
       body .guide_area .guide_title_pc img {
@@ -139,29 +162,31 @@ body {
       body .guide_area .guide_item .cards {
         width: 100%; }
       body .guide_area .guide_item h2 {
-        font-size: 24px;
-        font-size: 2.4rem;
+        font-size: 16px;
+        font-size: 1.6rem;
         color: #887f69;
-        font-weight: bold; }
+        font-weight: bold;
+        margin-bottom: 10px; }
       body .guide_area .guide_item h3 {
-        font-size: 18px;
-        font-size: 1.8rem;
+        font-size: 12px;
+        font-size: 1.2rem;
         margin: 0;
         color: #887f69;
         font-weight: bold; }
       body .guide_area .guide_item p {
-        font-size: 14px;
-        font-size: 1.4rem; }
+        font-size: 12px;
+        font-size: 1.2rem;
+        margin-bottom: 10px; }
       body .guide_area .guide_item span {
-        font-size: 28px;
-        font-size: 2.8rem; }
+        font-size: 20px;
+        font-size: 2rem; }
     @media (min-width: 550px) {
       body .guide_area .guide_item {
         box-sizing: border-box;
         border-right: 2px solid #f9f8f6;
         border-left: 2px solid #f9f8f6;
         width: 50%;
-        height: 350px;
+        height: 255px;
         float: left;
         margin: 0; } }
   @media (min-width: 550px) {
@@ -179,7 +204,7 @@ body {
       position: relative;
       height: 100%;
       width: 90%;
-      padding: 20px 0;
+      padding: 15px 0;
       margin: 0;
       margin-left: auto;
       margin-right: auto; }
@@ -191,7 +216,7 @@ body {
       body .search_area .search_item dd {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 15px;
         right: 0; }
         body .search_area .search_item dd button {
           background-color: #eee;
@@ -236,14 +261,18 @@ body {
     body .accordion_wrapper .accordion_list {
       display: none; }
       body .accordion_wrapper .accordion_list li {
+        position: relative;
         list-style: none;
         padding: 15px 5%;
         background-color: #fff;
         border-bottom: 2px solid #f9f8f6;
         margin: 0;
-        font-size: 13px;
-        font-size: 1.3rem; }
+        font-size: 12px;
+        font-size: 1.2rem; }
         body .accordion_wrapper .accordion_list li img {
+          position: absolute;
+          top: 25%;
+          right: 5%;
           padding: 5px 0; }
         body .accordion_wrapper .accordion_list li a {
           text-decoration: none;
@@ -252,7 +281,8 @@ body {
     body .accordion_wrapper {
       margin: 10px 0; } }
   body .info_wrapper {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    background-color: #fff; }
     body .info_wrapper .info_title {
       background-color: #887f69;
       padding: 15px 5%;
@@ -282,8 +312,8 @@ body {
           display: inline-block;
           width: 100%;
           height: 100%;
-          font-size: 13px;
-          font-size: 1.3rem; }
+          font-size: 12px;
+          font-size: 1.2rem; }
     @media (min-width: 550px) {
       body .info_wrapper .info_contents {
         width: 100%;
@@ -375,13 +405,15 @@ body {
 .products_title {
   padding: 15px 0; }
   .products_title h3 {
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     margin-bottom: 5px; }
   .products_title p {
     color: #a6a6a6;
-    margin: 0; }
+    margin: 0;
+    font-size: 11px;
+    font-size: 1.1rem; }
 
 @media (min-width: 550px) {
   .products_area {
@@ -456,7 +488,7 @@ body {
 .color_wrapper {
   border-bottom: 2px solid #f6f5f2; }
   .color_wrapper img {
-    padding: 10px; }
+    padding: 10px 0; }
   .color_wrapper table {
     width: 100%;
     border: 1px solid  #f6f5f2;
@@ -477,9 +509,9 @@ body {
     display: inline-block;
     margin: 0; }
     .plice_area p span {
-      color: red;
-      font-size: 30px;
-      font-size: 3rem; }
+      color: #e80f66;
+      font-size: 25px;
+      font-size: 2.5rem; }
   .plice_area input {
     width: 140px;
     height: 48px;
@@ -513,21 +545,26 @@ body {
     text-align: right; } }
 .products_discription {
   padding: 20px 0; }
+  .products_discription h2 {
+    font-size: 19px;
+    font-size: 1.9rem;
+    color: #887f69;
+    font-weight: bold; }
   .products_discription h3 {
-    font-size: 20px;
-    font-size: 2rem;
+    font-size: 16px;
+    font-size: 1.6rem;
     color: #887f69;
     font-weight: bold; }
   .products_discription p {
-    font-size: 13px;
-    font-size: 1.3rem; }
+    font-size: 11px;
+    font-size: 1.1rem; }
   .products_discription table {
     width: 100%;
     color: #887f69; }
     .products_discription table td {
       border: 1px solid #e2ddd4;
-      font-size: 14px;
-      font-size: 1.4rem; }
+      font-size: 12px;
+      font-size: 1.2rem; }
     .products_discription table .color {
       width: 30%;
       text-align: center;
@@ -540,16 +577,18 @@ body {
 @media (min-width: 550px) {
   .products_discription {
     border-top: 2px solid #f6f5f2; }
+    .products_discription p {
+      font-size: 14px;
+      font-size: 1.4rem; }
 
   .quantity {
     border-bottom: 0px; } }
 @media (max-width: 440px) {
   .products_area {
-    padding: 0 -20px;
     box-sizing: border-box; } }
 @media (max-width: 550px) {
   .products_area {
-    margin: 0 -7.5%;
-    padding: 0 7.5%; } }
+    margin: 0 -4%;
+    padding: 0 4%; } }
 
 /*# sourceMappingURL=main.css.map */
