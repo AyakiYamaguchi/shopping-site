@@ -971,7 +971,7 @@ body{
     img{
         margin:0;
         padding:10px 0;
-        width:80%;
+        width:205px;
         
     }
 }
@@ -992,6 +992,11 @@ body{
         display:inline-block;
         float:left;
         text-align:right;
+        
+        
+        img{
+            width:80%;
+        }
     }
     
 }

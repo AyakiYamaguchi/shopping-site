@@ -528,7 +528,7 @@ body {
   .cart_area img {
     margin: 0;
     padding: 10px 0;
-    width: 80%; }
+    width: 205px; }
 
 @media (min-width: 550px) {
   .plice_wrapper {
@@ -542,7 +542,9 @@ body {
     box-sizing: border-box;
     display: inline-block;
     float: left;
-    text-align: right; } }
+    text-align: right; }
+    .cart_area img {
+      width: 80%; } }
 .products_discription {
   padding: 20px 0; }
   .products_discription h2 {
